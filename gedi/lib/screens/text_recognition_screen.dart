@@ -92,8 +92,9 @@ class _TextRecognitionScreenState extends State<TextRecognitionScreen> {
                     future: recognized(),
                     builder: (BuildContext context, AsyncSnapshot snapshot) {
                       if (snapshot.hasData == false) {
-                        return const RecognizedWordsContainer(
-                            content: "No Data");
+                        return RecognizedWordsContainer(
+                            content: '${snapshot.data}'
+                            );
                       } else if (snapshot.hasError) {
                         return RecognizedWordsContainer(
                             content: 'Error: ${snapshot.error}');

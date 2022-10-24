@@ -34,59 +34,6 @@ class _MainPageState extends State<MainPage> {
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              height: 30,
-              child: Text(
-                userName,
-                style: TextStyle(
-                  fontSize: 30,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              margin: const EdgeInsets.only(top: 20, bottom: 20, left: 40),
-            ),
-            Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    width: 120,
-                    height: 40,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(50),
-                        border: Border.all(
-                            color: const Color(0x00ffffff), width: 1),
-                        gradient: const LinearGradient(
-                            begin: Alignment.bottomLeft,
-                            end: Alignment.topRight,
-                            colors: [Color(0xff9694DE), Color(0xff6667AB)])),
-                    child: Text(
-                      'Level $level',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.white,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                    margin: EdgeInsets.only(left: 40, right: 10),
-                    alignment: Alignment.center,
-                  ),
-                  Text(
-                    '$point%',
-                    style: TextStyle(
-                      color: Color(0xff898989),
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  const Text(
-                    ' to Next Level',
-                    style: TextStyle(
-                      color: Color(0xff898989),
-                      fontSize: 15,
-                    ),
-                  )
-                ]), // Level ~ point
             Calendar(),
             Today(),
             SizedBox(height: 2),
@@ -95,7 +42,7 @@ class _MainPageState extends State<MainPage> {
           ],
         ),
         panel: Center(child: Weekly()),
-        minHeight: MediaQuery.of(context).size.height - 600,
+        minHeight: MediaQuery.of(context).size.height - 470,
         borderRadius: BorderRadius.circular(10),
         margin: EdgeInsets.only(left: 20, right: 20),
 //        padding: EdgeInsets.all(10),
